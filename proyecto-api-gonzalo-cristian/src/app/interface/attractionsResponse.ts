@@ -66,3 +66,17 @@ export interface Attraction {
     upcomingEvents: UpcomingEvents;
     _links: Links;
 }
+export interface TicketmasterAttractionResponse {
+    _embedded: {
+        attractions: Attraction[]; // Aquí está la lista
+    };
+    _links: {
+        self: { href: string };
+    };
+    page: {
+        size: number;
+        totalElements: number;
+        totalPages: number;
+        number: number;
+    };
+}
