@@ -3,6 +3,10 @@ import { EventListComponent } from './components/event-list-component/event-list
 import { EventDetail } from './pages/event-detail/event-detail';
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 
+import { AttractionListComponent} from './components/attraction-list-component/attraction-list-component';
+import { AttractionItemComponent } from './components/attraction-item-component/attraction-item-component';
+
+
 export const routes: Routes = [
   {
     path: '',
@@ -18,12 +22,7 @@ export const routes: Routes = [
     path: '**',
     component: PageNotFound,
   },
-];
-import { AttractionListComponent} from './components/attraction-list-component/attraction-list-component';
-import { AttractionItemComponent } from './components/attraction-item-component/attraction-item-component';
-
-export const routes: Routes = [
-  { path: '', 
+   { path: '', 
     redirectTo: 'attractions', 
     pathMatch: 'full' },
   {
@@ -34,6 +33,5 @@ export const routes: Routes = [
     path: 'attractions/:id',
     component: AttractionItemComponent,
   }
-
-
 ];
+
